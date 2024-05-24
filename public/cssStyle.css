@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    height: 100%;
+}
+.home {
+    padding: 0;
+
+}
+
+.home .slide {
+    min-height: 95vh;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.4);   
+     opacity: 0.7;
+}
+
+.home .slide .content {
+    width: 80rem;
+    text-align: center;
+}
+
+.home .slide .content h3 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1.1;
+    padding: 2rem 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.home .slide .content a {
+    color: white;
+}
+
+.home .slide .content button {
+    transition: transform 0.3s ease-in-out; 
+}
+
+.home .slide .content button:hover {
+    transform: scale(1.1);
+ }
+
+/* Custom styles for Swiper navigation arrows content */
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: '>'; /* Change the content to '>' for the next arrow */
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: '<'; /* Change the content to '<' for the previous arrow */
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    color: white !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 2rem;
+}
+.navbar{
+    position: fixed;
+    z-index: 1000;
+    opacity: 0.8;
+ 
+}
+.navbar span{
+    font-size: 1.5rem;
+}
+
+.footer a{
+    text-decoration: none !important;
+}
+
+.index{
+    min-height: 50vh;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 30rem;
+    background-image: url("https://images.unsplash.com/photo-1515325595179-59cd5262ca53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTYwfHxib29rc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: -1;
+
+}
+
+
+
+    .custom-card {
+        width: 600px; /* Adjust the width to your desired fixed width */
+    }
+    .custom-dim{
+        height: 143px !important;
+        width: 246px !important;
+    }
+
+    
+.form-style {
+    margin: auto;
+
+    padding-top: 200px;
+}
+
+.edit-form-style {
+    margin: auto;
+
+    padding-top:300px;
+    z-index: 1;
+}
+
+.login-form-style {
+    margin: auto;
+    padding-top:100px;
+    z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+    .index .subtitle{
+        font-size: 5px;
+    }
+
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="/cssStyle.css">
+    <style nonce="<%=nonce%>">
+        body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          margin: 0;
+        
+          
+        }
+        
+        .content {
+          flex: 1;
+          padding: 20px;
+        }
+        
+        .footer {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 10px;
+          margin-top: auto;
+       
+        }
+        body{
+          background-image: url(https://images.unsplash.com/photo-1608823468206-5be309dc29cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzMwfHxib29rc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60); 
+          background-repeat: no-repeat;
+           background-size: cover;
+            background-position: center;
+        }
+        #creatorName{
+          padding-top: 150px;
+        }
+      </style>
+   
+</head>
+<body></body>
+    <%-include('../partials/navbar')%>
+    <div class="container d-flex flex-column align-items-center" id="creatorName">
+        <div class="d-flex flex-column align-items-center">
+            <div class="p-2"><span class="text-white fs-1 pr-2 mr-2 fw-bolder ">HELLO</span></div>
+            <div class="p-2"><span class="fs-2 fw-bold text-white"><%=user.username %></span> </div>
+    
+        </div>
+        <div class="d-flex container mt-5 pt-5 align-items-center justify-content-between mb-3 pb-3">
+            <div class="d-flex flex-column align-items-center">
+              <div class="d-flex flex-column align-items-center border-bottom border-top border-black">
+                <div class="mt-3 pt-3">
+                    <p-2 class="fs-2 fw-bolder text-white">User Info</p-2>
+                </div>
+                <div class="d-flex flex-column align-items-center mt-3 pt-3">
+                    <div class="p-2 fs-4 text-white"><span class="fw-bold text-white">Username:</span> <%=user.username %></div>
+                    <div class="p-2 fs-4 text-white"><span class="fw-bold text-white">Email:</span> <%=user.email %></div>
+                </div>
+                
+                
+            </div>
+            <div class="mt-5">
+              <form action="/userInfo?_method=DELETE" method="post">
+                <button class="btn btn-secondary fs-5">Delete Account</button>
+            </form>
+            </div>
+            </div>
+           
+            <div>
+
+                   
+            
+            </div>
+
+            <div class="d-flex flex-column align-items-center  border-bottom border-top border-black">
+                <div class="mt-3 pt-3">
+                    <p-2 class="fs-2 fw-bolder text-white">Books you have created:</p-2>
+                </div>
+                <div class="d-flex flex-column align-items-center mt-3 pt-3">
+                 
+                    <% if (books.length === 0) { %>
+                        <div class="p-2 fs-4 text-white">You haven't created any book</div>
+                      <% } else { %>
+                        <% for (let b of books) { %>
+                          <div class="p-2 fs-4 text-white"><span class="fw-bold text-white">Book Title:</span> <%= b.title %></div>
+                        <% } %>
+                      <% } %>
+                      
+                   
+  
+                </div>
+            
+            </div>
+          
+        </div>
+
+    </div>
+
+    <%-include('../partials/footer')%>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+
+    
+   
+    
+</body>
+</html>
